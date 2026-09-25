@@ -13,14 +13,14 @@
 
 Every published build, and a SHA-256 and MD5 for every file. The MD5 column is checked against the
 MD5 that Motorola itself writes into `flashfile.xml`: ✅ means the file is byte for byte what
-Motorola shipped. The same lists live as plain files in [`builds/<build>/`](builds/), ready for
+Motorola shipped. The same lists live as `SHA256SUMS` / `MD5SUMS` at the root of each build's branch, ready for
 `sha256sum -c` / `md5sum -c`.
 
 ## Builds
 
-| Build | Android | Fingerprint | Package | Files | Release |
+| Build | Android | Fingerprint | Package | Files | Branch |
 |---|---|---|---|---|---|
-| `W1UIS36H.39-17-8` | 16 | `motorola/vienna_g_sys/vienna:16/W1UIS36H.39-17-8/d2b9a8-78a3a:user/release-keys` | RETBR, `subsidy-DEFAULT`, `regulatory-DEFAULT`, cid 50 | 35 (no `super`) | [W1UIS36H.39-17-8](https://github.com/VD171/vienna-firmware/releases/tag/W1UIS36H.39-17-8) |
+| `W1UIS36H.39-17-8` | 16 | `motorola/vienna_g_sys/vienna:16/W1UIS36H.39-17-8/d2b9a8-78a3a:user/release-keys` | RETBR, `subsidy-DEFAULT`, `regulatory-DEFAULT`, cid 50 | 35 (no `super`) | [`MMI-W1UIS36H.39-17-8`](https://github.com/VD171/vienna-firmware/tree/MMI-W1UIS36H.39-17-8) |
 
 ## `W1UIS36H.39-17-8`
 
@@ -44,7 +44,7 @@ Motorola shipped. The same lists live as plain files in [`builds/<build>/`](buil
 | `logo.img` | `logo_a` | 20234528 | `0a260f627e80194e883959dbcc4ac2ecbc96bc8156f5ec3b7690beb3533f59f3` | `707fc34237c2a61225bfb9b28ad7e1ef` | ✅ |
 | `mcf_ota.img` | `mcf_ota_a` | 29999104 | `bb39ca3a71d9424d2152611f18c15ee96ae5eb039908d4465dde568e01079133` | `dd7ee3a3696c228a89755a53da0a4130` | ✅ |
 | `mcupm.img` | `mcupm_a` | 713344 | `c036c446d3e994267585bef5e206d0b5496a5baa23ee7172f7d90db07aad4210` | `d6dd49419607c28f28ec6742c8d23ac6` | ✅ |
-| `modem.img` | `modem_a` | 112854800 | `62545d23aabcab9ab8aff31f15626182ebe383de005ce846df989b44dd236c31` | `e075c9d8a087947edab81cfddb49c4dc` | ✅ |
+| `modem.img` ¹ | `modem_a` | 112854800 | `62545d23aabcab9ab8aff31f15626182ebe383de005ce846df989b44dd236c31` | `e075c9d8a087947edab81cfddb49c4dc` | ✅ |
 | `PGPT` | `gpt` | 32768 | `3e39839e38db871acba73b420ed0abbcb4f4f3835b91a574f30d61342fb56659` | `593bd037b8a107d33218872bb7ff0571` | ✅ |
 | `pi_img.img` | `pi_img_a` | 63808 | `c15d3247bda63fcceac7d673723437b9969661e3b26c81c05e0b9a0849e9149c` | `7d65c11fe20824fe143f26d2cdf81aba` | ✅ |
 | `preloader.img` | `preloader` | 865316 | `4332e3423d1ab50848f33df0f1350a9762842f659907b46c032095748ea9852c` | `4a428d69726f7db9b16508b5f96d5b7b` | ✅ |
@@ -65,8 +65,11 @@ Motorola shipped. The same lists live as plain files in [`builds/<build>/`](buil
 `n/a` = the file is not flashed, so `flashfile.xml` carries no MD5 for it (metadata, manifests, or the
 two zero byte placeholders, which exist in the official package and are kept only for completeness).
 
+¹ stored in the branch as `modem.img.part00` + `modem.img.part01` (GitHub's 100 MB limit); `cat` them back.
+The parts are listed in the branch's `SHA256SUMS` / `MD5SUMS` too.
+
 ### `super` (not published here)
 
 `super.img` is ~8 GB (31 sparse chunks) and is not redistributed. Its per chunk MD5s are in the
-official [`flashfile.xml`](builds/W1UIS36H.39-17-8/flashfile.xml), so a full package obtained elsewhere can still be
+official [`flashfile.xml`](https://github.com/VD171/vienna-firmware/blob/MMI-W1UIS36H.39-17-8/flashfile.xml), so a full package obtained elsewhere can still be
 verified against Motorola's own manifest.

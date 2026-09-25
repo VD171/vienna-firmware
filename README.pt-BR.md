@@ -5,25 +5,25 @@
 📒 **Todas as builds e todos os hashes: [CATALOG.md](CATALOG.md)**
 
 Firmware stock do **Motorola Edge 60 Neo** (`XT2509-1`, codinome `vienna`, MT6878 / Dimensity 7400): o
-**pacote fastboot oficial, sem o `super`**. Uma release por build, cada arquivo exatamente como a Motorola
-distribuiu, todos conferidos com o MD5 que a própria Motorola grava no `flashfile.xml`.
+**pacote fastboot oficial, sem o `super`**. **Uma branch por build**, com os arquivos na raiz, cada um
+exatamente como a Motorola distribuiu, todos conferidos com o MD5 que a própria Motorola grava no `flashfile.xml`.
 
 ## Por que sem o `super`
 
 O `super` guarda `system`, `vendor`, `product` e companhia. São ~8 GB em 31 pedaços esparsos, muito acima do
-que uma release comporta (2 GiB por arquivo), e é a parte que você quase nunca precisa. Todo o resto está
+que o git no GitHub comporta (100 MB por arquivo), e é a parte que você quase nunca precisa. Todo o resto está
 aqui, e é o que você precisa para **recuperar a cadeia de boot, tirar o root ou devolver uma partição**:
 `boot`, `init_boot`, `vendor_boot`, `vbmeta`, `dtbo`, `lk`, `logo`, o modem e os firmwares dos coprocessadores.
 
 Se precisar da ROM inteira, baixe o pacote completo pela ferramenta da própria Motorola (Rescue and Smart
-Assistant / LMSA). Os MD5 de cada pedaço do `super` estão no [`flashfile.xml`](builds/) publicado, então dá
+Assistant / LMSA). Os MD5 de cada pedaço do `super` estão no `flashfile.xml` publicado de cada build, então dá
 para conferir mesmo assim contra o manifesto da Motorola.
 
 ## Builds
 
-| Build | Android | Release |
+| Build | Android | Branch |
 |---|---|---|
-| `W1UIS36H.39-17-8` | 16 | [W1UIS36H.39-17-8](https://github.com/VD171/vienna-firmware/releases/tag/W1UIS36H.39-17-8) |
+| `W1UIS36H.39-17-8` | 16 | [`MMI-W1UIS36H.39-17-8`](https://github.com/VD171/vienna-firmware/tree/MMI-W1UIS36H.39-17-8) |
 
 As imagens **não dependem de região**: este é o pacote `regulatory-DEFAULT` (Global). A identidade de varejo
 e de regulamentação mora na partição regulatory do próprio aparelho, não no firmware, então as mesmas imagens
@@ -33,14 +33,18 @@ servem qualquer região na mesma build. Nenhuma identidade de aparelho está con
 
 | Onde | O quê |
 |---|---|
-| **Assets da release** | as imagens, com os nomes originais, mais `SHA256SUMS` e `MD5SUMS` |
-| [`builds/<build>/`](builds/) | os mesmos `SHA256SUMS` / `MD5SUMS`, o `flashfile.xml`, o `servicefile.xml` e o `signing-info.txt` da Motorola, as informações da build e os dois arquivos vazios do pacote |
-| [`CATALOG.md`](CATALOG.md) | uma tabela por build: arquivo, partição, tamanho, SHA-256, MD5 e se o MD5 bate com o da Motorola |
+| **`main`** (esta branch) | os READMEs e o [`CATALOG.md`](CATALOG.md): uma tabela por build com arquivo, partição, tamanho, SHA-256, MD5 e se o MD5 bate com o da Motorola |
+| **uma branch por build** (`MMI-<build>`, mesmo padrão do [vienna-kernel-source](https://github.com/VD171/vienna-kernel-source)) | todos os arquivos do pacote na raiz, com os nomes originais, mais `SHA256SUMS`, `MD5SUMS` e o `flashfile.xml` / `servicefile.xml` / `signing-info.txt` da Motorola |
+
+O `modem.img` (112 MB) passa do limite de 100 MB do GitHub, então está guardado como `modem.img.part00` +
+`modem.img.part01`. Junte com `cat`, na ordem; as listas de hash cobrem as partes e o arquivo original.
 
 ## Conferir
 
 ```bash
-# na pasta onde você baixou os arquivos
+git clone --depth 1 --single-branch -b MMI-W1UIS36H.39-17-8 https://github.com/VD171/vienna-firmware
+cd vienna-firmware
+cat modem.img.part00 modem.img.part01 > modem.img
 sha256sum -c --ignore-missing SHA256SUMS
 md5sum    -c --ignore-missing MD5SUMS
 ```
