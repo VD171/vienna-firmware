@@ -1,0 +1,11 @@
+BUILD INFORMATION
+  SW Version: vienna_g_sys-user 16 W1UIS36H.39-17-8 d2b9a8-78a3a release-keys MW-382
+  MBM Version: MBM-3.1-vienna-df8668-W1UIS36H.39-17-8-d2b9a8
+  Modem Version: MT6878V_NR17.RC.MP.V40.2.P249.01.342R
+  SW Display Build ID: W1UIS36H.39-17-8
+  Build Fingerprint: motorola/vienna_g_sys/vienna:16/W1UIS36H.39-17-8/d2b9a8-78a3a:user/release-keys
+
+OTHER INFORMATION
+  Subsidy Lock Config: slcf_mediatek_default_v1.0.atc
+  Regulatory Info (eLabel): regulatory_info_default.png
+  eLabel SHA1: da39a3ee5e6b4b0d3255bfef95601890afd80709
