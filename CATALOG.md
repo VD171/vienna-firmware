@@ -20,7 +20,7 @@ Motorola shipped. The same lists live as `SHA256SUMS` / `MD5SUMS` at the root of
 
 | Build | Android | Fingerprint | Package | Files | Branch |
 |---|---|---|---|---|---|
-| `W1UIS36H.39-17-8` | 16 | `motorola/vienna_g_sys/vienna:16/W1UIS36H.39-17-8/d2b9a8-78a3a:user/release-keys` | RETBR, `subsidy-DEFAULT`, `regulatory-DEFAULT`, cid 50 | 35 (no `super`) | [`MMI-W1UIS36H.39-17-8`](https://github.com/VD171/vienna-firmware/tree/MMI-W1UIS36H.39-17-8) |
+| `W1UIS36H.39-17-8` | 16 | `motorola/vienna_g_sys/vienna:16/W1UIS36H.39-17-8/d2b9a8-78a3a:user/release-keys` | `subsidy-DEFAULT`, `regulatory-DEFAULT` (Global), cid 50 | 35 (no `super`) | [`MMI-W1UIS36H.39-17-8`](https://github.com/VD171/vienna-firmware/tree/MMI-W1UIS36H.39-17-8) |
 
 ## `W1UIS36H.39-17-8`
 
