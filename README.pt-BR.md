@@ -8,7 +8,7 @@ o pacote fastboot oficial, **sem o `super`**, com todos os arquivos na raiz dest
 | | |
 |---|---|
 | Fingerprint | `motorola/vienna_g_sys/vienna:16/W1UIS36H.39-17-8/d2b9a8-78a3a:user/release-keys` |
-| Pacote | RETBR, `subsidy-DEFAULT`, `regulatory-DEFAULT` (Global, não depende de região), cid 50 |
+| Pacote | `subsidy-DEFAULT`, `regulatory-DEFAULT` (Global, não depende de região), cid 50 |
 | Integridade | o MD5 de cada arquivo gravável bate com o do [`flashfile.xml`](flashfile.xml) da própria Motorola |
 | Tabela de hashes | [CATALOG.md na `main`](https://github.com/VD171/vienna-firmware/blob/main/CATALOG.md) |
 

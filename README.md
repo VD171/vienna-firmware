@@ -8,7 +8,7 @@ Stock firmware of the **Motorola Edge 60 Neo** (`XT2509-1`, `vienna`), build **`
 | | |
 |---|---|
 | Fingerprint | `motorola/vienna_g_sys/vienna:16/W1UIS36H.39-17-8/d2b9a8-78a3a:user/release-keys` |
-| Package | RETBR, `subsidy-DEFAULT`, `regulatory-DEFAULT` (Global, region agnostic), cid 50 |
+| Package | `subsidy-DEFAULT`, `regulatory-DEFAULT` (Global, region agnostic), cid 50 |
 | Integrity | the MD5 of every flashable file matches the one in Motorola's own [`flashfile.xml`](flashfile.xml) |
 | Hash table | [CATALOG.md on `main`](https://github.com/VD171/vienna-firmware/blob/main/CATALOG.md) |
 
