@@ -23,6 +23,7 @@ para conferir mesmo assim contra o manifesto da Motorola.
 
 | Build | Android | Branch |
 |---|---|---|
+| `W1UI36H.39-25-11-4` | 16 | [`MMI-W1UI36H.39-25-11-4`](https://github.com/VD171/vienna-firmware/tree/MMI-W1UI36H.39-25-11-4) |
 | `W1UIS36H.39-17-8` | 16 | [`MMI-W1UIS36H.39-17-8`](https://github.com/VD171/vienna-firmware/tree/MMI-W1UIS36H.39-17-8) |
 
 As imagens **não dependem de região**: este é o pacote `regulatory-DEFAULT` (Global). A identidade de varejo

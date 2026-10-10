@@ -23,6 +23,7 @@ verify it against Motorola's manifest.
 
 | Build | Android | Branch |
 |---|---|---|
+| `W1UI36H.39-25-11-4` | 16 | [`MMI-W1UI36H.39-25-11-4`](https://github.com/VD171/vienna-firmware/tree/MMI-W1UI36H.39-25-11-4) |
 | `W1UIS36H.39-17-8` | 16 | [`MMI-W1UIS36H.39-17-8`](https://github.com/VD171/vienna-firmware/tree/MMI-W1UIS36H.39-17-8) |
 
 The images are **region agnostic**: this is the `regulatory-DEFAULT` (Global) package. Retail and regulatory
