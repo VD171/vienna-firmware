@@ -1,0 +1,94 @@
+
+
+HAB_PRODUCT vienna
+
+HAB_SECURITY_VERSION 27
+
+HAB_CID 50
+
+HAB_CUSTOMER_REGION Retail
+
+OTA_KEY motorola/security/certs/hab_support/products/vienna/apk_certs_Retail/ota.x509.pem
+
+
+
+This build is customer signed.
+
+Use "fastboot getvar cid" to confirm customer ID on secure HW.
+
+Value must be 0 (developer HW) or match this value:
+
+RetailDocomo          => 50
+RetailSoftbank        => 50
+Retail                => 50
+RetailLocked          => 51
+
+
+For signed build support, please see:
+
+motorola/security/certs/README.txt
+
+
+
+
+
+
+enforce_anti_rollback_check_in_ota=true
+BOOTLOADER_ANTIROLLBACK_VER_SUM=023
+[anti_rollback_version_begin]
+preloader.img__preloader=0x02
+preloader.bin__preloader=0x02
+efuse.img__efuse=0x02
+lk.img__bl2_ext=0x02
+lk.img__aee=0x02
+gz.img__gz=0x02
+gz.img__mkp_service=0x02
+gz.img__rkp=0x02
+gz.img__unmap2=0x02
+gz.img__vm=0x02
+spmfw.img__spmfw=0x00
+cam_vpu1.img__cam_vpu1=0x00
+cam_vpu2.img__cam_vpu2=0x00
+cam_vpu3.img__cam_vpu3=0x00
+scp.img__tinysys-scp-RV55_A=0x00
+scp.img__tinysys-scp-RV55_A_dram=0x00
+dpm.img__dpmpm=0x00
+dpm.img__dpmdm=0x00
+dpm.img__dpmpt=0x00
+ccu.img__ccu=0x00
+apusys.img__tinysys-apusys-RV33_A=0x00
+gpueb.img__tinysys-gpueb-RV33_A=0x00
+gpueb.img__tinysys-gpueb-RV33_A_xfile=0x00
+vcp.img__tinysys-vcp-RV55_A=0x00
+vcp.img__tinysys-vcp-RV55_A_dram=0x00
+audio_dsp.img__hifi3_a_dram=0x00
+audio_dsp.img__hifi3_a_iram=0x00
+audio_dsp.img__hifi3_a_sram=0x00
+audio_dsp.img__hifi3_b_dram=0x00
+audio_dsp.img__hifi3_b_iram=0x00
+audio_dsp.img__hifi3_b_sram=0x00
+connsys_gnss.img__connsys_gnss=0x00
+connsys_bt.img__connsys_bt_mt6878_mt6631=0x00
+connsys_bt.img__connsys_bt_mt6878_mt6637=0x00
+connsys_wifi.img__connsys_wifi_mt6878_mt6631=0x00
+connsys_wifi.img__connsys_wifi_mt6878_mt6637=0x00
+lk.img__lk=0x00
+tee.img__atf=0x00
+tee.img__atf_dram=0x00
+tee.img__tee=0x00
+tee.img__spmc_dtb=0x00
+sspm.img__tinysys-sspm=0x00
+mcupm.img__tinysys-mcupm-RV33_A=0x00
+mcupm.img__tinysys-mcupm-RV33_A_xfile=0x00
+pi_img.img__pi_img=0x00
+single_bin_modem.bin__md1rom=0x01
+single_bin_modem.bin__md1dsp=0x01
+single_bin_modem.bin__md1drdi=0x01
+lk_main_dtb.img__lk_main_dtb=0x00
+lk_dtbo.img__lk_dtbo=0x00
+logo.img__logo=0x00
+logo.img__logo1=0x00
+logo.img__logo2=0x00
+logo.img__logo3=0x00
+dtbo.img__dtbo=0x00
+[anti_rollback_version_end]

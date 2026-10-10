@@ -1,0 +1,11 @@
+BUILD INFORMATION
+  SW Version: vienna_g_sys-user 16 W1UI36H.39-25-11-4 2734cd-58da6 release-keys MW-390
+  MBM Version: MBM-3.1-vienna-ddf047-W1UI36H.39-25-11-4-2734cd
+  Modem Version: MT6878V_NR17.RC.MP.V40.2.P249.01.342R
+  SW Display Build ID: W1UI36H.39-25-11-4
+  Build Fingerprint: motorola/vienna_g_sys/vienna:16/W1UI36H.39-25-11-4/2734cd-58da6:user/release-keys
+
+OTHER INFORMATION
+  Subsidy Lock Config: slcf_mediatek_default_v1.0.atc
+  Regulatory Info (eLabel): regulatory_info_default.png
+  eLabel SHA1: da39a3ee5e6b4b0d3255bfef95601890afd80709
