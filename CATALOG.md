@@ -20,8 +20,57 @@ Motorola shipped. The same lists live as `SHA256SUMS` / `MD5SUMS` at the root of
 
 | Build | Android | Fingerprint | Package | Files | Branch |
 |---|---|---|---|---|---|
+| `W1UIS36H.39-25-11-4-3` | 16 | `motorola/vienna_g_sys/vienna:16/W1UIS36H.39-25-11-4-3/b83fa7-266e35:user/release-keys` | `subsidy-DEFAULT`, `regulatory-DEFAULT` (Global), cid 50 | 35 (no `super`) | [`MMI-W1UIS36H.39-25-11-4-3`](https://github.com/VD171/vienna-firmware/tree/MMI-W1UIS36H.39-25-11-4-3) |
 | `W1UI36H.39-25-11-4` | 16 | `motorola/vienna_g_sys/vienna:16/W1UI36H.39-25-11-4/2734cd-58da6:user/release-keys` | `subsidy-DEFAULT`, `regulatory-DEFAULT` (Global), cid 50 | 35 (no `super`) | [`MMI-W1UI36H.39-25-11-4`](https://github.com/VD171/vienna-firmware/tree/MMI-W1UI36H.39-25-11-4) |
 | `W1UIS36H.39-17-8` | 16 | `motorola/vienna_g_sys/vienna:16/W1UIS36H.39-17-8/d2b9a8-78a3a:user/release-keys` | `subsidy-DEFAULT`, `regulatory-DEFAULT` (Global), cid 50 | 35 (no `super`) | [`MMI-W1UIS36H.39-17-8`](https://github.com/VD171/vienna-firmware/tree/MMI-W1UIS36H.39-17-8) |
+
+## `W1UIS36H.39-25-11-4-3`
+
+| File | Partition | Size (bytes) | SHA-256 | MD5 | Motorola MD5 |
+|---|---|---:|---|---|:-:|
+| `PGPT` | `gpt` | 32768 | `3176067526575aed28e1200089149d10cd899d619c1d2668140aa251dab99d5e` | `b280c1942ceb13f3da7f18ad99d90760` | ✅ |
+| `VIENNA_G_SYS_W1UIS36H.39-25-11-4-3_subsidy-DEFAULT_regulatory-DEFAULT_cid50_CFC.info.txt` | `-` | 567 | `c829106d4c0381d0e4600ac2c8e7a66aa83203aee1b76358c957d51796e1fe8f` | `51a3eacb454a970cc232709363e59098` | n/a |
+| `apusys.img` | `apusys_a` | 1185936 | `71597ea7a1f2764bc85abec13c670b62c550685cd35d7020d3d1fdbcd86982da` | `ac7fe3d3468e31f731ed279a393da72e` | ✅ |
+| `boot.img` | `boot_a` | 67108864 | `893bb4a9103c6b64274a644c70514b4cab2636d0d3aea39e565c04a75df16b02` | `9409020ba748b986182b7d0458da1f56` | ✅ |
+| `ccu.img` | `ccu_a` | 103168 | `25886b1c8c9f13a8cb8ea53a67cd25a45deb3df235205c2955a60e5e66015be1` | `24de18679375d9a75bcd80410ae201ef` | ✅ |
+| `cid_template.dat` | `-` | 44 | `e0622885c2ee758d2e5db14a15113801672207142ac73a67fe53053d060b4898` | `fd086fc89b910d6b0dc51ff1925adb2c` | n/a |
+| `connsys_bt.img` | `connsys_bt_a` | 1510688 | `37e308135cd021d9bc6fdf3a2ee59ac0a1c1a306bcaa41c64f139276ca9fc377` | `7f254a118dc5673a54cc1a5f9f7b1381` | ✅ |
+| `connsys_gnss.img` | `connsys_gnss_a` | 527680 | `ccdfd338e5c6f6ab2a8a43b0d01fc8062a46a6d2ee61a196c812000dffaef32d` | `7adb118a2b9bc35c437ee214ff78b93e` | ✅ |
+| `connsys_wifi.img` | `connsys_wifi_a` | 3163424 | `2144d0f5d57a1c4eef93124f9a61af0e3b5a3d1df3cb19c58b156ac8be2d87d4` | `ba85a1f3520512d9156efc0801e1593a` | ✅ |
+| `dpm.img` | `dpm_a` | 905024 | `4e8ee4850d8d2d3575c407bdcb9eb0e129668b878cff0bb094135db80824a19a` | `b368b31882f85658ecd9137d0c566069` | ✅ |
+| `dtbo.img` | `dtbo_a` | 8388608 | `2285fbd2aacf8e771827eec9c933cc68def0ce7551e1de8e37d1c6ded174a214` | `e083c8a582123d7f03aebea54b196923` | ✅ |
+| `efuse.img` | `efuseBackup` | 4816 | `4123c4d2e16197be83ea35bd46d491189c70e417fe6dc74d18fe945fff1a5e8d` | `74b1751e4c9407d9a7661ad737beac2b` | ✅ |
+| `flashfile.xml` | `-` | 8420 | `8043278fbcc20bf81364c55e3baf73511f796e65dc1eac87a61e8d0bace57a1a` | `8c3624e602d6042421e1af1a78406a6a` | n/a |
+| `gpueb.img` | `gpueb_a` | 529184 | `69086059d1630ac0be68cbaa78ddf92a499e2b98061ffb4ad94ca514b8d2fbc5` | `b4b55eee6a5b61d6df8cfc52eb32bcf9` | ✅ |
+| `gz.img` | `gz_a` | 3337120 | `d1319167a82388b552fdc202d0c18bcc89be7e92d58a0747c05be32fd13dcc8e` | `452c5cc656666731f64c24832d8bca7c` | ✅ |
+| `init_boot.img` | `init_boot_a` | 8388608 | `deee62ddbdd2e6b58404fb3faeec94e76e81a88234c29a4b43ea2afea6f8f6ec` | `74e0cea28103e839860c6c4d34ccb62c` | ✅ |
+| `lk.img` | `lk_a` | 4401136 | `c352b65bc4a1dde4734451807ccf7a995b59349e6d0bc86507e23fb1a7981100` | `55c9b4c34c0065ba60652ab641280277` | ✅ |
+| `logo.img` | `logo_a` | 20234528 | `434eba818464561e7d892cdade6994f037658dbe4941496b2808f071838038cf` | `d5b383d42305c7ec6859858fda5f9119` | ✅ |
+| `mcf_ota.img` | `mcf_ota_a` | 29999104 | `1315c2d7a24eb9df809d5383a5e91d511450af856f8dbcd73f7e7dd4c8bf6b15` | `514cd92db755c5523cda5a0ca6ac40f9` | ✅ |
+| `mcupm.img` | `mcupm_a` | 713344 | `7fc116ef53f4da9d9a11d104de5f5fab1165893c8308773a675f5eb9c0bb0cb4` | `aafe129a20ccfcecf3013d4de2db27ce` | ✅ |
+| `pi_img.img` | `pi_img_a` | 63808 | `ec28529c378a67afdaed8b6b252dd8527e89719a012faa5204eb1ff0b8152b0c` | `4e5067be4b039d99222519cfd6b19ab0` | ✅ |
+| `preloader.img` | `preloader` | 865316 | `b22c3ab48a6d355d0943814be138bdda60e07454224540af7c90479688fb7be7` | `58adafc83ea1c6695d4cce28d91a24c3` | ✅ |
+| `regulatory_info_default.png` | `-` | 0 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` | `d41d8cd98f00b204e9800998ecf8427e` | n/a |
+| `scp.img` | `scp_a` | 10456224 | `caf08d792c63f1ed23703972374678fc22dcc8313f39817ff23b3d13cb6fb5a6` | `cae4d96cd65bb649f4432d337a5f41cc` | ✅ |
+| `servicefile.xml` | `-` | 8192 | `b6d502d8d322033112cd679c3e498570f61fdd0c6ac86b12d3863d9299ced43a` | `9f47e87732d313a1cb5583c699b1ed23` | n/a |
+| `signing-info.txt` | `-` | 2244 | `9a636f60fdc78d402799b5dcce2516087964dc1a309764f26b8ae5675735019a` | `d8f3441f711dec7cda08988ee56bd353` | n/a |
+| `slcf_mediatek_default_v1.0.atc` | `-` | 0 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` | `d41d8cd98f00b204e9800998ecf8427e` | n/a |
+| `spmfw.img` | `spmfw_a` | 18000 | `4abf480779aff85f4fc5a8507234e9901ebf0e8fd02f48fa129bc3b573844f30` | `68ea8126d7967ed38aceb1f950365787` | ✅ |
+| `sspm.img` | `sspm_a` | 887808 | `fa146802714001d99f4d10b1e6335b15729aa327494632489f948a980856b909` | `721c734f1d4de3fa3e5203f09a90ff15` | ✅ |
+| `tee.img` | `tee_a` | 1538304 | `de1b3d6c73e9449706d6f47f8bf811f4d81502d08c0cc2fbe03654ba23039bde` | `c4411fd96dfd4b7c8be77d87920f194d` | ✅ |
+| `vbmeta.img` | `vbmeta_a` | 8192 | `c556b7662841d86035fae01dead0c2aa0078bc8c9a241a3b696a3b014e456073` | `6e75540fa7b61cbf636ed269c2355329` | ✅ |
+| `vbmeta_system.img` | `vbmeta_system_a` | 4096 | `a02ae3a096ff36d20a27387253503772823e348d61834b098afb454f92e39783` | `a51018713f6af9619a6286b6109a899b` | ✅ |
+| `vcp.img` | `vcp_a` | 1487552 | `3066348ac770b953301a3baf87382a019ab546cdd915b784a6524af593104545` | `ef5885455b01cc2eba9eb5fa22b7dc54` | ✅ |
+| `vendor_boot.img` | `vendor_boot_a` | 67108864 | `b1606ab59609dd38ffa5dc5b341cb6a2e4acbaced73560131865ccd3eb1155c3` | `aaf161db332ba83cf056cf84be3c3130` | ✅ |
+
+¹ stored in the branch as `modem.img.part00` + `modem.img.part01` (GitHub's 100 MB limit); `cat` them back.
+The parts are listed in the branch's `SHA256SUMS` / `MD5SUMS` too.
+
+### `super` (not published here)
+
+`super.img` is ~8 GB (31 sparse chunks) and is not redistributed. Its per chunk MD5s are in the
+official [`flashfile.xml`](https://github.com/VD171/vienna-firmware/blob/MMI-W1UIS36H.39-25-11-4-3/flashfile.xml), so a full package obtained elsewhere can still be
+verified against Motorola's own manifest.
 
 ## `W1UI36H.39-25-11-4`
 
