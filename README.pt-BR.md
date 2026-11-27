@@ -69,12 +69,15 @@ fastboot flash vbmeta vbmeta.img
 > ⚠️ **Não rode o `flashfile.xml` às cegas.** Ele apaga `nvdata`, `userdata` e `metadata`, e espera os pedaços
 > do `super` que não estão aqui. O `servicefile.xml` é a mesma sequência sem apagar o `userdata`.
 
-## Relacionados
+## Veja também
+
+Os três repositórios **vienna**, uma função cada (este incluído):
 
 | Link | O quê |
 |---|---|
-| 🛠 [VD171/vienna-kernel-build](https://github.com/VD171/vienna-kernel-build) | root: KernelSU-Next LKM no `init_boot`, uma release por build do KSU-Next |
-| 📦 [VD171/vienna-kernel-source](https://github.com/VD171/vienna-kernel-source) | as fontes do kernel, extraídas, um branch por tag |
+| 🛠 [VD171/vienna-kernel-build](https://github.com/VD171/vienna-kernel-build) | root (KernelSU-Next LKM aplicado no `init_boot`), a build reproduzível do kernel e a receita de flash |
+| 📲 [VD171/vienna-firmware](https://github.com/VD171/vienna-firmware) | **(este repo)** firmware stock (o pacote fastboot oficial menos o `super`): recuperar a cadeia de boot, fazer unroot ou restaurar uma partição |
+| 📦 [VD171/vienna-kernel-source](https://github.com/VD171/vienna-kernel-source) | as fontes GPL do kernel, extraídas e conferidas por checksum, uma branch por tag de build |
 | 🧵 [Tópico no XDA](https://xdaforums.com/t/guide-rooting-how-to-root-motorola-60-edge-neo-5g-xt2509-1-vienna.4798267/) | `[GUIDE][ROOTING]` XT2509-1 (vienna) |
 
 ## Contato
